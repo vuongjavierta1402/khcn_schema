@@ -1,0 +1,336 @@
+Project KHCN_SCHEMA {
+    database_type: 'Oracle'
+note: '''
+# Ecommerce Database
+**markdown content here**
+'''
+}
+
+
+Table KHCN_THUYET_MINH_DE_TAI as TMDT {
+  MA_THUYET_MINH_DE_TAI nvarchar(8) [pk]
+  SHCC   nvarchar2(10) 
+	MA_SO_DE_TAI   nvarchar2(20) 
+	NGAY_NHAN_HO_SO number(200) 
+	TEN_DE_TAI_VN   nvarchar2(2000) 
+	TEN_DE_TAI_EN   nvarchar2(2000) 
+	FK_CAP_DE_TAI   nvarchar2(2) 
+	FL_LOAI_DE_TAI   nvarchar2(2) 
+	HUONG_DE_TAI   nvarchar2(2000) 
+	KEYWORDS   nvarchar2(1000) 
+	CHUYEN_NGANH_HEP   nvarchar2(500) 
+	THOI_GIAN_THUC_HIEN number 
+	FK_LOAI_HINH_NC   nvarchar2(2) 
+	TONG_KINH_PHI number 
+	KINH_PHI_TU_DHQG number 
+	KINH_PHI_HUY_DONG number 
+	HD_VON_TU_CO number 
+	HD_KHAC number 
+	NGUON_KP_KHAC number 
+	FK_CHU_NHIEM_DT   nvarchar2(6) 
+	CNDT_HH_HV_HO_TEN   nvarchar2(100) 
+	CNDT_NGAY_SINH number(200) 
+	CNDT_PHAI   nvarchar2(2) 
+	CNDT_SO_CMND   nvarchar2(12) 
+	CNDT_NGAY_CAP number(200) 
+	CNDT_NOI_CAP   nvarchar2(2) 
+	CNDT_MS_THUE   nvarchar2(10) 
+	CNDT_SO_TAI_KHOAN   nvarchar2(30) 
+	CNDT_NGAN_HANG   nvarchar2(400) 
+	CNDT_DIA_CHI_CQ   nvarchar2(400) 
+	CNDT_DIEN_THOAI   nvarchar2(100) 
+	CNDT_EMAIL   nvarchar2(100) 
+	TOM_TAT_HD_NC clob 
+	FK_CQ_CHU_TRI   nvarchar2(5) 
+	CQCT_TEN_CO_QUAN   nvarchar2(1000) 
+	CQCT_HO_TEN_TT   nvarchar2(100) 
+	CQCT_DIEN_THOAI   nvarchar2(100) 
+	CQCT_FAX   nvarchar2(50) 
+	CQCT_DIA_CHI   nvarchar2(400) 
+	CQCT_EMAIL   nvarchar2(100) 
+	CQCT_SO_TAI_KHOAN   nvarchar2(30) 
+	CQCT_KHO_BAC   nvarchar2(400) 
+	FK_CQ_PHOI_HOP_1   nvarchar2(5) 
+	CQPH1_TEN_CO_QUAN   nvarchar2(1000) 
+	CQPH1_HO_TEN_TT   nvarchar2(100) 
+	CQPH1_DIEN_THOAI   nvarchar2(100) 
+	CQPH1_FAX   nvarchar2(50) 
+	CQPH1_DIA_CHI   nvarchar2(400) 
+	CQPH1_EMAIL   nvarchar2(100) 
+	CQPH1_SO_TAI_KHOAN   nvarchar2(30) 
+	CQPH1_KHO_BAC   nvarchar2(400) 
+	FK_CQ_PHOI_HOP_2   nvarchar2(5) 
+	CQPH2_TEN_CO_QUAN   nvarchar2(1000) 
+	CQPH2_HO_TEN_TT   nvarchar2(100) 
+	CQPH2_DIEN_THOAI   nvarchar2(100) 
+	CQPH2_FAX   nvarchar2(50) 
+	CQPH2_DIA_CHI   nvarchar2(400) 
+	CQPH2_EMAIL   nvarchar2(100) 
+	CQPH2_SO_TAI_KHOAN   nvarchar2(30) 
+	CQPH2_KHO_BAC   nvarchar2(400) 
+	TQ_TINH_HINH_NC_LINK   nvarchar2(200) 
+	Y_TUONG_KH_LINK   nvarchar2(200) 
+	KQ_NC_SO_KHOI_LINK   nvarchar2(200) 
+	TAI_LIEU_TK_LINK   nvarchar2(200) 
+	MUC_TIEU_NC_EN_LINK   nvarchar2(200) 
+	MUC_TIEU_NC_VN_LINK   nvarchar2(200) 
+	NOI_DUNG_NC_LINK   nvarchar2(200) 
+	PA_PHOI_HOP_LINK   nvarchar2(200) 
+	KN_UD_KQNC_LINK   nvarchar2(200) 
+	GHI_CHU clob 
+	FK_DONG_CHU_NHIEM_DT   nvarchar2(6) 
+	DCNDT_HH_HV_HO_TEN   nvarchar2(100) 
+	DCNDT_NGAY_SINH number(200) 
+	DCNDT_PHAI   nvarchar2(2) 
+	DCNDT_SO_CMND   nvarchar2(12) 
+	DCNDT_NGAY_CAP number(200) 
+	DCNDT_NOI_CAP   nvarchar2(2) 
+	DCNDT_MS_THUE   nvarchar2(10) 
+	DCNDT_SO_TAI_KHOAN   nvarchar2(30) 
+	DCNDT_NGAN_HANG   nvarchar2(400) 
+	DCNDT_DIA_CHI_CQ   nvarchar2(400) 
+	DCNDT_DIEN_THOAI   nvarchar2(100) 
+	DCNDT_EMAIL   nvarchar2(100) 
+	NGAY_DANG_KY number(200) 
+	TO_CHUC_TAI_TRO_KHAC clob 
+	LOCK_TMDT number 
+	MUC_CL_SP_DANG_II clob 
+	TQ_TINH_HINH_NC clob 
+	Y_TUONG_KH clob 
+	TAI_LIEU_TK clob 
+	NOI_DUNG_NC clob 
+	PA_PHOI_HOP clob 
+	KQ_NC_SO_KHOI clob 
+	MUC_TIEU_NC_EN clob 
+	MUC_TIEU_NC_VN clob 
+	UD_KQNC_LV_DAO_TAO clob 
+	UD_KQNC_SXKD clob 
+	UD_KQNC_CHUYEN_GIAO clob 
+	PHU_LUC_GIAI_TRINH_LINK   nvarchar2(200) 
+	DU_TOAN_LINK   nvarchar2(200) 
+	TO_CHUC_TAI_TRO_KHAC_LINK   nvarchar2(200) 
+	VB_CHUNG_MINH_VON_KHAC_LINK   nvarchar2(200) 
+	THUNG_RAC number 
+	FK_TINH_TRANG   nvarchar2(3) 
+	FK_BO_MON_DANG_KY   nvarchar2(10) 
+	DTB_DANH_GIA number 
+	FK_DONG_CHU_NHIEM_HV_NCS   nvarchar2(10) 
+	NGAY_UPDATE number(200) 
+	DHQG_KP_KHOAN_CHI number 
+	DHQG_KP_KHONG_KHOAN_CHI number 
+	CTDT_CQ_CONG_TAC   nvarchar2(20) 
+	KN_DONG_GOP_DT_1 clob 
+	MO_TA_ND_NHAN_SU clob 
+	KN_DONG_GOP_DT_2 clob 
+	IF_TAP_CHI_QUOC_TE   nvarchar2(200) 
+	UD_KQNC_THUC_TE clob 
+	UD_KQNC_PHAT_TRIEN_NNC clob 
+	FK_MA_HOC_VIEN   nvarchar2(10) 
+	FK_MA_KHOA_XET_DUYET   nvarchar2(10)
+}
+
+Table KHCN_AN_PHAM_KH_TMDT as APKHTMDT {
+  FK_MA_AN_PHAM_KH   nvarchar2(3) [pk]
+	FK_MA_THUYET_MINH_DT   nvarchar2(8) [pk]
+	SO_LUONG number  
+	DK_NOI_CONG_BO   nvarchar2(500)  
+	GHI_CHU   nvarchar2(500)  
+	TEN_BB_SACH_DK clob  
+	TT   nvarchar2(10) 
+}
+
+REF: APKHTMDT.FK_MA_AN_PHAM_KH > TMDT.MA_THUYET_MINH_DE_TAI
+
+Table KHCN_BANG_GP_HUU_ICH as BGPHI {
+   SHCC    nvarchar2(10) [not null]
+	 TEN_BANG    nvarchar2(400) 
+	 SAN_PHAM_MA_DE_TAI    nvarchar2(50) 
+	 SO_HIEU_BANG    nvarchar2(100) 
+	 NAM_CAP  number 
+	 NOI_CAP    nvarchar2(400) 
+	 NUOC_CAP    nvarchar2(2) 
+	 TAC_GIA  number 
+	 TIME  number(200) 
+	 MA  number [pk]
+}
+
+Table KHCN_BANG_SANG_CHE as BSC {
+   SHCC    nvarchar2(10) [not null]
+	 TEN_BANG    nvarchar2(400) 
+	 SAN_PHAM_MA_DE_TAI    nvarchar2(50) 
+	 SO_HIEU_BANG    nvarchar2(100) 
+	 NAM_CAP  number 
+	 NOI_CAP    nvarchar2(400) 
+	 NUOC_CAP    nvarchar2(2) 
+	 TAC_GIA  number 
+	 TIME  number(200) 
+	 MA  number [pk]
+}
+
+Table KHCN_CHUYEN_GIA_TMDT as CGTMDT {
+  MA_CHUYEN_GIA_TMDT nvarchar2(3) [pk]
+	SHCC nvarchar2(10) 
+	FK_MA_THUYET_MINH_DT nvarchar2(8) [pk]
+	HH_HV_HO_TEN nvarchar2(200) 
+	HUONG_NC_CHUYEN_SAU nvarchar2(2000) 
+	CO_QUAN_CONG_TAC nvarchar2(200) 
+	DIA_CHI nvarchar2(400) 
+	DIEN_THOAI nvarchar2(100) 
+	EMAIL nvarchar2(100) 
+	GHI_CHU nvarchar2(200)
+}
+
+REF: CGTMDT.MA_CHUYEN_GIA_TMDT > TMDT.MA_THUYET_MINH_DE_TAI
+
+
+Table KHCN_CO_QUAN as CQ {
+  MA nvarchar2(5) [pk]
+	TEN nvarchar2(1000) 
+	HO_TEN_TT nvarchar2(100) 
+	DIEN_THOAI nvarchar2(50) 
+	FAX nvarchar2(50) 
+	DIA_CHI nvarchar2(400) 
+	EMAIL nvarchar2(100) 
+	SO_TAI_KHOAN nvarchar2(30) 
+	KHO_BAC nvarchar2(400) 
+	GHI_CHU nvarchar2(200) 
+}
+
+Table KHCN_CONG_TRINH_KHOA_HOC as CTKH {
+  MA_CONG_TRINH nvarchar2(3) [pk] 
+	SHCC nvarchar2(10) [pk]
+	TEN_TAC_GIA nvarchar2(500) 
+	TEN_BAI_BAO nvarchar2(2000) 
+	TEN_TAP_CHI nvarchar2(1000) 
+	SO_TAP_CHI nvarchar2(100) 
+	TRANG_DANG_BAI_BAO nvarchar2(50) 
+	NAM_XUAT_BAN_TAP_CHI number 
+	LOAI_CONG_TRINH nvarchar2(2) 
+	GHI_CHU nvarchar2(1000) 
+	ISBN nvarchar2(50) 
+	FK_MA_LOAI_TAP_CHI nvarchar2(2) 
+	FK_MA_LOAI_TAC_GIA nvarchar2(2) 
+	CITY nvarchar2(50) 
+	QUOC_GIA nvarchar2(20) 
+	NGAY_THANG_XB_TAP_CHI number(200) 
+	SAN_PHAM_MA_DE_TAI nvarchar2(1000) 
+	DIEM_IF number 
+	ISI nvarchar2(50) 
+	TAC_GIA_CHINH nvarchar2(200) 
+	TAC_GIA_THUOC_VNU nvarchar2(1000) 
+	THUOC_LINH_VUC nvarchar2(400) 
+	LINK_BAI_BAO nvarchar2(500) 
+	TIME_STRAP number(200) 
+	LINK_FILE_BAI_BAO nvarchar2(200) 
+}
+
+Table KHCN_PB_NOI_DUNG as PB_NOIDUNG
+{
+    MA_THUYET_MINH_DT NVARCHAR2(8)  [pk]
+    SHCC              NVARCHAR2(10) [pk]
+    A1_TAM_QUAN_TRONG NVARCHAR2(4000)
+    A2_CHAT_LUONG_NC  NVARCHAR2(4000)
+    A3_NLNC_CSVC      NVARCHAR2(4000)
+    A4_KINH_PHI_NX    NVARCHAR2(4000)
+    C_KET_LUAN        NVARCHAR2(4000)
+}
+
+table KHCN_PB_DM_NOI_DUNG
+{
+    MA_ND             NVARCHAR2(20) [pk]
+    NOI_DUNG          NVARCHAR2(2000)
+    THANG_DIEM_TRUONG NVARCHAR2(50)
+    THANG_DIEM_C_NCCB NVARCHAR2(50)
+    THANG_DIEM_C_NCUD NVARCHAR2(50)
+    THANG_DIEM_C_NCTK NVARCHAR2(50)
+}
+
+
+table KHCN_PB_NOI_DUNG_DANH_GIA
+{
+    ID                NUMBER [pk]
+    MA_THUYET_MINH_DT NVARCHAR2(8)
+    SHCC              NVARCHAR2(10)
+    STT               NVARCHAR2(8)
+    MA_ND             NVARCHAR2(20)
+    THANG_DIEM_TRUONG NVARCHAR2(50)
+    THANG_DIEM_C_NCCB NVARCHAR2(50)
+    THANG_DIEM_C_NCUD NVARCHAR2(50)
+    THANG_DIEM_C_NCTK NVARCHAR2(50)
+    DIEM              NUMBER
+    ID_CHA            NUMBER
+    ID_ORDER_BY       NUMBER
+    XOA               NUMBER
+    CREATE_TIMESTAMP  NUMBER(20)
+    UPDATE_TIMESTAMP  NUMBER(20)
+    DIEM_TOI_DA       NUMBER
+    ALLOW_EDIT        NUMBER
+    DIEM_TEXT         NVARCHAR2(50)
+}
+
+table KHCN_PB_NOI_DUNG_KINH_PHI
+{
+    ID                NUMBER [pk]
+    MA_THUYET_MINH_DT NVARCHAR2(8)
+    SHCC              NVARCHAR2(10)
+    STT               NVARCHAR2(8)
+    MA_ND             NVARCHAR2(20)
+    NHAN_XET          NUMBER
+    KINH_PHI_DE_NGHI  NUMBER
+    ID_CHA            NUMBER
+    ID_ORDER_BY       NUMBER
+    XOA               NUMBER
+    CREATE_TIMESTAMP  NUMBER(20)
+    UPDATE_TIMESTAMP  NUMBER(20)
+}
+
+table KHCN_PHAN_CONG_PHAN_BIEN
+{
+    MA_THUYET_MINH_DT NVARCHAR2(8) [pk]
+    SHCC              NVARCHAR2(10) [pk]
+    KQ_PHAN_HOI       NUMBER
+    NGAY_PHAN_HOI     NUMBER(20)
+    NGAY_PHAN_CONG    NUMBER(20)
+    GIA_HAN_PB        NUMBER(20)
+}
+
+table KHCN_PB_CAU_TRUC
+{
+    FK_CAP_DE_TAI     NVARCHAR2(2) [pk]
+    STT               NUMBER       [pk]
+    MA_ND             NVARCHAR2(20)
+    NHOM_CHI_TIET     NVARCHAR2(10)
+    STT_NHOM_CHI_TIET NVARCHAR2(10)
+    ID_ORDER_BY       NUMBER
+    MA_ND_CHA         NVARCHAR2(20)
+    ALLOW_EDIT        NUMBER
+}
+
+Ref: "KHCN_PHAN_CONG_PHAN_BIEN"."MA_THUYET_MINH_DT" < "KHCN_PB_NOI_DUNG"."MA_THUYET_MINH_DT"
+
+Ref: "KHCN_PHAN_CONG_PHAN_BIEN"."SHCC" < "KHCN_PB_NOI_DUNG"."SHCC"
+
+Ref: "KHCN_PB_DM_NOI_DUNG"."MA_ND" < "KHCN_PB_NOI_DUNG_KINH_PHI"."MA_ND"
+
+Ref: "KHCN_PHAN_CONG_PHAN_BIEN"."SHCC" < "KHCN_PB_NOI_DUNG_KINH_PHI"."SHCC"
+
+Ref: "KHCN_PHAN_CONG_PHAN_BIEN"."MA_THUYET_MINH_DT" < "KHCN_PB_NOI_DUNG_KINH_PHI"."MA_THUYET_MINH_DT"
+
+Ref: "KHCN_PHAN_CONG_PHAN_BIEN"."MA_THUYET_MINH_DT" < "KHCN_PB_NOI_DUNG_DANH_GIA"."MA_THUYET_MINH_DT"
+
+Ref: "KHCN_PHAN_CONG_PHAN_BIEN"."SHCC" < "KHCN_PB_NOI_DUNG_DANH_GIA"."SHCC"
+
+Ref: "KHCN_PB_DM_NOI_DUNG"."MA_ND" < "KHCN_PB_NOI_DUNG_DANH_GIA"."MA_ND"
+
+Ref: "KHCN_PB_CAU_TRUC"."MA_ND" < "KHCN_PB_DM_NOI_DUNG"."MA_ND"
+
+Ref: "KHCN_THUYET_MINH_DE_TAI"."MA_THUYET_MINH_DE_TAI" < "KHCN_PHAN_CONG_PHAN_BIEN"."MA_THUYET_MINH_DT"
+
+table KHCN_NHOM_NGANH_TMDT
+{
+    FK_MA_NHOM_NGANH     NVARCHAR2(3) [pk]
+    FK_MA_THUYET_MINH_DT NVARCHAR2(8) [pk]
+    TEN_NHOM_NGANH_KHAC  NVARCHAR2(500)
+    HUONG_NGHIEN_CUU     NVARCHAR2(1000)
+    THU_TU_UU_TIEN       NUMBER
+}
